@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ### Disclaimer
 This blog post was from a written exercise from my previous job application. This post aims to demonstrate the process of data manipulation, analysis, and visualisation using the R programming language as the underlying data is considered outdated.  
 
+Source code can be founded in https://github.com/kcha193/Greenhouse_Effect 
+
 ### Executive Summary
 
 + Chart shows a strong positive relationship between annual combustible fuel electricity production and annual greenhouse gas emissions across 30 OECD countries.
