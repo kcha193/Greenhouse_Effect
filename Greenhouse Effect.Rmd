@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ## Greenhouse gas emissions and combustible fuel electricity production in New Zealand and other OECD countries
 
 ### Disclaimer
-This blog post was from a written exercise from my previous job application. This post aims to demonstrate data manipulation, analysis, and visualisation using the R programming language as the underlying data is considered outdated.  
+This blog post was from a written exercise from my previous job application. This post aims to demonstrate the process of data manipulation, analysis, and visualisation using the R programming language as the underlying data is considered outdated.  
 
 ### Executive Summary
 
@@ -254,7 +254,7 @@ ref_line <-
 ```
 ### Side-by-side bar-plot comparing the annual Greenhouse gas emissions and combustible fuel electricity production between 30 OECD countries
 
-```{r}
+```{r, fig.height = 10, fig.width = 8}
 g <- 
   ggplot(dat_plot, aes(x =  Country, y = estimate, fill = Type)) + 
   geom_col(position = "dodge") + 
@@ -326,7 +326,7 @@ dat_plot <-
 
 ### Final product
 
-```{r}
+```{r, fig.height= 7, fig.width=10}
 g <- 
   ggplot(dat_plot, aes(x =  Energy_GWh, y = Carbon_Gg, 
                        label = Country)) + 
@@ -372,3 +372,7 @@ g
  + Annotate function allows me to have shading and write text on the plot in specific area.
  + The continuous scales for both x and y axis are adjusted to 1 unit break.
  + Lastly, I used black and white theme, so it is easier to read.
+ 
+ 
+## Citation
+OECD (2021), Population (indicator). doi: 10.1787/d434f82b-en (Accessed on 12 December 2021)
