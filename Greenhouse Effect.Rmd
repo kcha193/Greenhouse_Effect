@@ -192,8 +192,7 @@ fit_Carbon_Gg <- lm(Carbon_Gg_perC ~ Country_label,
 
 ```{r}
 tidy(fit_Carbon_Gg) %>% 
-  arrange(estimate) %>% 
-  knitr::kable("markdown")
+  arrange(estimate) 
 ```
 
 NZ is significantly worse than Iceland, Switzerland and France in average Greenhouse gas emissions.
@@ -207,8 +206,7 @@ fit_Energy_GWh <- lm(Energy_GWh_perC ~  Country_label,
 
 ```{r}
 tidy(fit_Energy_GWh) %>% 
-  arrange(estimate) %>% 
-  knitr::kable("markdown")
+  arrange(estimate) 
 ```
 
 NZ is significantly worse than Iceland, Switzerland, France, Norway, Slovakia, and Hungary in average combustible fuel electricity production.
@@ -256,7 +254,7 @@ ref_line <-
 ```
 ### Side-by-side bar-plot comparing the annual Greenhouse gas emissions and combustible fuel electricity production between 30 OECD countries
 
-```{r, fig.height = 10, fig.width = 8}
+```{r, fig.height = 9, fig.width = 8}
 g <- 
   ggplot(dat_plot, aes(x =  Country, y = estimate, fill = Type)) + 
   geom_col(position = "dodge") + 
@@ -376,5 +374,9 @@ g
  + Lastly, I used black and white theme, so it is easier to read.
  
  
-## Citation
-OECD (2021), Population (indicator). doi: 10.1787/d434f82b-en (Accessed on 12 December 2021)
+## Data source
+
++ Population Statistics:	https://data.oecd.org/pop/population.htm
++ Greenhouse Gas Emissions from Energy Industries:	http://unfccc.int/files/ghg_emissions_data/application/x-zip-compressed/ai_energy_industries.zip
+
+
